@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build 50 small FE functions/Apps - Phase</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div id="mouse-tracker" class="container">
+        <h1>Mouse tracker</h1>
+        <div class="flex-row">
+          <div class="draw-area">
+            <h3>Hover over this Box</h3>
+            <div class="box"></div>
+          </div>
+          <div class="visual-area">
+            <h3>Tracker display</h3>
+            <div class="visual-box">
+              <div class="box1"></div>
+              <div class="box1"></div>
+              <div class="box1"></div>
+              <div class="box1"></div>
+              <div class="tracker-dot">
+                <div class="tooltip"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="focus-trap">
+        <h1>Focus trap</h1>
+        <div class="content">
+          <h3>Click the button to add task</h3>
+          <button class="button">Add task</button>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required /><br /><br />
+                <label for="choice">Choose option:</label>
+                <select id="choice">
+                  <option value="one">Option One</option>
+                  <option value="two">Option Two</option>
+                  <option value="three">Option Three</option></select
+                ><br /><br />
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="traffic-light">
+        <h1>Traffic lights - State Management</h1>
+        <div class="lightbox">
+          <div class="lights">
+            <div class="green"></div>
+            <div class="red"></div>
+            <div class="yellow"></div>
+          </div>
+        </div>
+        <button class="button">Run</button>
+      </div>
+      <div class="container" id="progress-ring">
+        <h1>Circular progress Ring</h1>
+        <div class="flex progress-wrapper">
+          <div class="progress">progress</div>
+          <input type="range" value="75" min="0" max="100" step="1" />
+        </div>
+        <section>
+          <svg class="pie-svg" width="100" height="100" viewBox="0 0 100 100">
+            <g class="circles" transform="rotate(-90, 50, 50)">
+              <circle class="pie-background" cx="50" cy="50" r="40" />
+              <circle class="pie-progress" cx="50" cy="50" r="40" />
+            </g>
+            <text class="pie-text" x="50" y="55" text-anchor="middle">75%</text>
+          </svg>
+        </section>
+      </div>
+      <div class="container" id="notification-toast">
+        <h1>Notification Toast</h1>
+        <button class="button">Generate Toast</button>
+        <div class="main-notification-container"></div>
+      </div>
+    </main>
+    <script src="app1.js"></script>
+    <script src="app2.js"></script>
+    <script src="app3.js"></script>
+    <script src="app4.js"></script>
+    <script src="app5.js"></script>
+  </body>
+</html>
