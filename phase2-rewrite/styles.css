@@ -1,0 +1,209 @@
+:root {
+  /* Color Palette */
+  --primary-color: #007aff;
+  --secondary-color: #ff3b30;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --button-color-1: #ffc7c7;
+
+  /* Typography */
+  --font-family: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --font-size-heading: 2rem;
+  --line-height: 1.5;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border radius */
+  --border-radius: 8px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  /* Transition */
+  --transition-speed-fast: 0.3s;
+  --transition-speed-medium: 0.7s;
+  --transition-speed-normal: 1s;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  margin-bottom: 100px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 10px auto;
+}
+main {
+  margin: auto;
+  /* width: calc(100vw - 16px); */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #878585;
+  padding: 20px;
+  max-width: 1200px;
+}
+p {
+  max-width: 600px;
+  text-align: center;
+  padding: 10px 0px;
+  margin: 10px 0px;
+}
+button {
+  height: 40px;
+  width: auto;
+  min-width: 100px;
+  border: none;
+  background: linear-gradient(45deg, #ff92799a, #fb3b3b81);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fffffff8;
+  transition: transform ease 0.3s;
+  border-radius: 5px;
+}
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #ff92799a, #fb3b3be1);
+}
+button:active {
+  transform: translateY(2px);
+}
+#traffic-lights {
+  min-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  #traffic-lights {
+    min-width: auto;
+  }
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.lightbox {
+  height: 300px;
+  width: 100px;
+  background-color: #151515;
+  border: 1px solid #cecece;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 5px;
+}
+.lights {
+  height: 80px;
+  width: 80px;
+  background-color: #cacaca81;
+  border-radius: 50%;
+}
+
+.progress-wrapper {
+  max-width: 350px;
+  justify-content: space-between;
+  margin: auto;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+[type='range'] {
+  width: 200px;
+}
+.pie-background {
+  fill: none;
+  stroke: #ecf0f1;
+  stroke-width: 15;
+}
+.pie-progress {
+  fill: none;
+  stroke: #3498db;
+  stroke-width: 15;
+  stroke-dasharray: 251.2; /* Circumference of circle with r=40: 2 * PI * 40 */
+  stroke-dashoffset: calc(251.2 - (var(--percent, 75) * 251.2 / 100));
+  transition: stroke-dashoffset var(--transition-speed-fast);
+}
+.pie-text {
+  fill: var(--text-color);
+  font-size: 16px;
+  font-weight: bold;
+  dominant-baseline: middle;
+}
+
+.notification-container {
+  position: fixed;
+  top: 50px;
+  left: calc(100vw - 330px);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.notification {
+  width: 300px;
+  position: relative;
+  background-color: aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 20px;
+  align-items: center;
+  transform: translateX(110%);
+  transition: ease 1s;
+}
+.notification icon {
+  background-color: rgb(123, 229, 194);
+  padding: 10px;
+  border-radius: 50%;
+}
+.notification p {
+  margin: 0;
+  padding: 10px 0px;
+  text-align: left;
+}
+.notification::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  background-color: #3498db;
+  transition: linear 10s;
+  transform-origin: right;
+}
+
+.notification.show-line::after {
+  width: 0%;
+}
+.notification p {
+  font-size: 14px;
+}

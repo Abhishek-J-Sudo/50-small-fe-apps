@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Phase 2 Apps - Re-write</title>
+  </head>
+  <body>
+    <main>
+      <section id="traffic-lights">
+        <h1>Traffic light App - State Management</h1>
+        <div class="lightbox">
+          <div id="green" class="lights"></div>
+          <div id="yellow" class="lights"></div>
+          <div id="red" class="lights"></div>
+        </div>
+        <button>Start</button>
+      </section>
+      <section id="progress-ring">
+        <h1>Progress Ring - State Management</h1>
+        <div class="progress-wrapper flex-row">
+          <input type="range" value="0" min="0" max="100" step="1" />
+        </div>
+        <div>
+          <svg class="pie-svg" width="100" height="100" viewBox="0 0 100 100">
+            <g class="circles" transform="rotate(-90, 50, 50)">
+              <circle class="pie-background" cx="50" cy="50" r="40" />
+              <circle class="pie-progress" cx="50" cy="50" r="40" />
+            </g>
+            <text class="pie-text" x="50" y="55" text-anchor="middle">0%</text>
+          </svg>
+        </div>
+      </section>
+      <section id="notification-toast">
+        <h1>Notification Toast</h1>
+        <p>Press start to start notification-toast</p>
+        <div class="notification-container"></div>
+        <button>Start</button>
+      </section>
+    </main>
+    <script src="/app1.js"></script>
+    <script src="/app2.js"></script>
+    <script src="/app3.js"></script>
+  </body>
+</html>
