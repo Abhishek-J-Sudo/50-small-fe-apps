@@ -34,8 +34,41 @@
           </div>
         </div>
       </section>
+      <section>
+        <div class="container-style align-center">
+          <h1>Node Walker - Navigate Siblings</h1>
+          <p>Use the buttons to navigate between sibling elements in the DOM.</p>
+
+          <div class="controls">
+            <button id="prevBtn">← Previous Sibling</button>
+            <button id="nextBtn">Next Sibling →</button>
+          </div>
+
+          <div class="node-display">
+            <!-- This is our node playground -->
+            <div class="node-container">
+              <div class="node" data-type="text">Text Node</div>
+              <div class="node" data-type="image">Image Node</div>
+              <div class="node" data-type="button">Button Node</div>
+              <div class="node" data-type="input">Input Node</div>
+              <div class="node" data-type="heading">Heading Node</div>
+            </div>
+          </div>
+
+          <div class="info-panel">
+            <h3>Current Node Info</h3>
+            <div id="nodeInfo">
+              <p>Position: <span id="position">1</span> of <span id="total">5</span></p>
+              <p>Node Type: <span id="nodeType">text</span></p>
+              <p>Previous Sibling: <span id="prevSibling">none</span></p>
+              <p>Next Sibling: <span id="nextSibling">Image Node</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- <script src="/app1.js"></script> -->
     <script src="/app1-rewrite.js"></script>
+    <script src="/node-walker-ai.js"></script>
   </body>
 </html>

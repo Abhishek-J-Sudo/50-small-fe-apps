@@ -95,7 +95,7 @@ button {
   background: linear-gradient(45deg, #ff92799a, #fb3b3b81);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #fffffff8;
-  transition: transform ease 0.3s;
+  transition: transform ease-in-out 0.3s;
   border-radius: 5px;
   padding: 10px;
 }
@@ -139,6 +139,11 @@ label {
   padding: 20px;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
+}
+.align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .button1 {
   height: 40px;
@@ -217,4 +222,37 @@ label {
 
 .attr-class {
   color: #4caf50;
+}
+
+.node-display {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+  min-height: 200px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.node {
+  padding: 20px;
+  margin: 10px;
+  background-color: #f0f0f0;
+  border: 2px solid transparent;
+  display: inline-block;
+}
+
+.node.active {
+  border-color: blue;
+  background-color: #e0e0ff;
+}
+
+.info-panel {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
 }
