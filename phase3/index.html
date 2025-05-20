@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Phase 3 Apps</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Interactive DOM Visualizer</h1>
+        <div class="sample-container container-style">
+          <label>Sample HTML Structure</label>
+          <textarea
+            id="input-area"
+            rows="50"
+            cols="50"
+            placeholder="Paste your HTML here..."
+          ></textarea>
+          <div class="flex-row">
+            <button class="button1">Visualize DOM</button>
+            <button class="button2">Load Sample HTML</button>
+          </div>
+          <div class="flex-row mt-20 split">
+            <div class="sample-container container-style h400">
+              <label>DOM Tree</label>
+              <div id="output-area"></div>
+            </div>
+            <div class="sample-container container-style h400">
+              <label>Element Properties</label>
+              <div id="elements-area"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <script src="/app1.js"></script> -->
+    <script src="/app1-rewrite.js"></script>
+  </body>
+</html>
