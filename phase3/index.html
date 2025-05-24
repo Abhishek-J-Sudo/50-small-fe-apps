@@ -66,9 +66,106 @@
           </div>
         </div>
       </section>
+      <section>
+        <div class="app-container container-style">
+          <h1>Element Cloner</h1>
+
+          <div class="controls">
+            <div class="clone-options">
+              <label>
+                <input type="checkbox" id="deep-clone" checked />
+                Deep clone (include children)
+              </label>
+              <label>
+                <input type="checkbox" id="clone-events" />
+                Attempt to clone events
+              </label>
+            </div>
+
+            <button id="reset-target">Reset Target Area</button>
+          </div>
+
+          <div class="workspace">
+            <div class="source-elements">
+              <h2>Source Elements</h2>
+              <div class="source-container">
+                <!-- Simple button -->
+                <button class="source-element" data-element-type="button">Click Me!</button>
+
+                <!-- Input field -->
+                <input
+                  class="source-element"
+                  data-element-type="input"
+                  type="text"
+                  value="Edit me"
+                />
+
+                <!-- Nested structure -->
+                <div class="source-element nested-container" data-element-type="nested">
+                  <h3>Nested Element</h3>
+                  <p>This element has <strong>children</strong> inside it.</p>
+                  <button>Nested Button</button>
+                </div>
+
+                <!-- Element with event -->
+                <div class="source-element with-event" data-element-type="event">
+                  Element with Event
+                </div>
+              </div>
+            </div>
+
+            <div class="target-area">
+              <h2>Clone Target</h2>
+              <div id="clone-target" class="clone-container">
+                <!-- Cloned elements will appear here -->
+                <p class="empty-message">Cloned elements will appear here</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-panel2">
+            <h3>Clone Information</h3>
+            <div id="clone-info">Select an element and clone it to see information.</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container-style align-center">
+          <h1>Event Delegation Board</h1>
+          <p>Add dynamic elements and watch how ONE event listener handles them all!</p>
+
+          <div class="controls">
+            <input type="text" id="element-text" placeholder="Enter element text..." />
+            <select id="element-type">
+              <option value="card">Card</option>
+              <option value="button">Button</option>
+              <option value="badge">Badge</option>
+            </select>
+            <button id="add-element" class="button1">Add Element</button>
+            <button id="clear-board" class="button2">Clear Board</button>
+          </div>
+
+          <!-- This is the KEY container - ONE listener here handles ALL children -->
+          <div id="delegation-board" class="delegation-board">
+            <p class="empty-message">Add elements to see event delegation in action!</p>
+          </div>
+
+          <div class="info-panel">
+            <h3>Event Information</h3>
+            <div id="event-info">
+              <p>Total elements: <span id="element-count">0</span></p>
+              <p>Total interactions: <span id="interaction-count">0</span></p>
+              <p>Last action: <span id="last-action">None</span></p>
+              <p>Target element: <span id="target-element">None</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- <script src="/app1.js"></script> -->
     <script src="/app1-rewrite.js"></script>
     <script src="/node-walker-ai.js"></script>
+    <script src="/element-cloner.js"></script>
+    <script src="/event-delegation-ai-version.js"></script>
   </body>
 </html>
