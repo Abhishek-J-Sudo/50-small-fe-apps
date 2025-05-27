@@ -161,11 +161,106 @@
           </div>
         </div>
       </section>
+      <!-- Add this section to your existing index.html -->
+      <section>
+        <div class="container-style align-center">
+          <h1>DOM Fragment Builder</h1>
+          <p>Compare efficient DOM updates using DocumentFragment vs direct manipulation</p>
+
+          <!-- Data Input Controls -->
+          <div class="fragment-controls">
+            <div class="input-group">
+              <label for="element-count">Number of elements:</label>
+              <input type="number" id="element-count" value="100" min="10" max="1000" step="10" />
+            </div>
+
+            <div class="input-group">
+              <label for="element-type-select">Element type:</label>
+              <select id="element-type-select">
+                <option value="list">Simple List Items</option>
+                <option value="cards">User Cards</option>
+                <option value="complex">Complex Nested</option>
+              </select>
+            </div>
+
+            <div class="method-buttons">
+              <button id="generate-direct" class="button2">Direct DOM Method</button>
+              <button id="generate-fragment" class="button1">Fragment Method</button>
+              <button id="generate-both" class="button-special">Compare Both</button>
+            </div>
+          </div>
+
+          <!-- Performance Display -->
+          <div class="performance-panel">
+            <h3>Performance Metrics</h3>
+            <div class="metrics-grid">
+              <div class="metric">
+                <span class="metric-label">Direct Method:</span>
+                <span id="direct-time" class="metric-value">-</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Fragment Method:</span>
+                <span id="fragment-time" class="metric-value">-</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Performance Gain:</span>
+                <span id="performance-gain" class="metric-value">-</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Output Comparison -->
+          <div class="output-comparison">
+            <div class="output-section">
+              <h3>Direct DOM Manipulation</h3>
+              <div class="method-info">
+                <small>Elements added one by one to DOM</small>
+              </div>
+              <div id="direct-output" class="output-container">
+                <p class="empty-message">Click "Direct DOM Method" to see results</p>
+              </div>
+            </div>
+
+            <div class="output-section">
+              <h3>Fragment Method</h3>
+              <div class="method-info">
+                <small>Elements built in fragment, then added as batch</small>
+              </div>
+              <div id="fragment-output" class="output-container">
+                <p class="empty-message">Click "Fragment Method" to see results</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clear Controls -->
+          <div class="clear-controls">
+            <button id="clear-direct" class="button2">Clear Direct</button>
+            <button id="clear-fragment" class="button2">Clear Fragment</button>
+            <button id="clear-both" class="button2">Clear Both</button>
+          </div>
+
+          <!-- Information Panel -->
+          <div class="info-panel">
+            <h3>Fragment Information</h3>
+            <div id="fragment-info">
+              <p><strong>DocumentFragment Benefits:</strong></p>
+              <ul>
+                <li>Reduces DOM reflows and repaints</li>
+                <li>Batches multiple operations into one</li>
+                <li>Improves performance with large datasets</li>
+                <li>Lives in memory until appended to DOM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- <script src="/app1.js"></script> -->
-    <script src="/app1-rewrite.js"></script>
+    <!-- <script src="/app1-rewrite.js"></script>
     <script src="/node-walker-ai.js"></script>
     <script src="/element-cloner.js"></script>
-    <script src="/event-delegation-ai-version.js"></script>
+    <script src="/event-delegation-ai-version.js"></script> -->
+    <!-- <script src="/dom-fragment-builder.js"></script> -->
+    <script src="/dom-fragment-builder-superAdvanced-ai.js"></script>
   </body>
 </html>
