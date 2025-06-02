@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>FE APPS | PHASE 4 - Form State Manager</title>
+  </head>
+  <body>
+    <main>
+      <section class="container-style">
+        <h2>Form State Manager</h2>
+
+        <!-- Main Form -->
+        <div class="form-container">
+          <form id="managed-form" class="form-grid">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+              <div class="field-feedback" id="name-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <div class="field-feedback" id="email-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age *</label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="18-100"
+                min="18"
+                max="100"
+                required
+              />
+              <div class="field-feedback" id="age-feedback"></div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Optional message (max 200 characters)"
+                rows="4"
+              ></textarea>
+              <div class="char-counter"><span id="char-count">0</span>/200 characters</div>
+              <div class="field-feedback" id="message-feedback"></div>
+            </div>
+
+            <div class="form-actions full-width">
+              <button type="submit" id="submit-btn" disabled>Submit Form</button>
+              <button type="reset" id="reset-btn" class="btn-outline">Reset Form</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- State Display Panel -->
+        <div class="state-panel container-style mt-20">
+          <h3>Live Form State</h3>
+          <div class="state-grid">
+            <div class="state-section">
+              <h4>Field Values</h4>
+              <div id="values-display" class="state-content"></div>
+            </div>
+
+            <div class="state-section">
+              <h4>Validation Status</h4>
+              <div id="validation-display" class="state-content"></div>
+            </div>
+
+            <div class="state-section">
+              <h4>Touched Fields</h4>
+              <div id="touched-display" class="state-content"></div>
+            </div>
+
+            <div class="state-section">
+              <h4>Form Summary</h4>
+              <div id="summary-display" class="state-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Status Messages -->
+        <div id="form-status" class="status-message"></div>
+      </section>
+    </main>
+    <script src="/app1/form-state-manager-ai.js"></script>
+  </body>
+</html>
