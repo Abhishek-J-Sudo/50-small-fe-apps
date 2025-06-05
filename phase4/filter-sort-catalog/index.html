@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>FE APPS | PHASE 4 - Filter/Sort Table</title>
+  </head>
+  <body>
+    <main>
+      <section class="container-style">
+        <h1>Product Catalog - Filter & Sort</h1>
+        <p>Advanced table manipulation with Maps for efficient data management</p>
+
+        <!-- Filter Controls -->
+        <div class="filter-section">
+          <h3>Filters & Search</h3>
+
+          <div class="filter-grid">
+            <!-- Text Search -->
+            <div class="filter-group">
+              <label for="search-input">Search Products:</label>
+              <input type="text" id="search-input" placeholder="Search by name or description..." />
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-group">
+              <label for="category-filter">Category:</label>
+              <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="books">Books</option>
+                <option value="home">Home & Garden</option>
+                <option value="sports">Sports</option>
+              </select>
+            </div>
+
+            <!-- Price Range -->
+            <div class="filter-group">
+              <label for="price-min">Price Range:</label>
+              <div class="range-inputs">
+                <input type="number" id="price-min" placeholder="Min" min="0" />
+                <span>to</span>
+                <input type="number" id="price-max" placeholder="Max" min="0" />
+              </div>
+            </div>
+
+            <!-- Rating Filter -->
+            <div class="filter-group">
+              <label for="rating-filter">Min Rating:</label>
+              <select id="rating-filter">
+                <option value="">Any Rating</option>
+                <option value="4">4+ Stars</option>
+                <option value="3">3+ Stars</option>
+                <option value="2">2+ Stars</option>
+                <option value="1">1+ Stars</option>
+              </select>
+            </div>
+
+            <!-- Stock Status -->
+            <div class="filter-group">
+              <label for="stock-filter">Availability:</label>
+              <select id="stock-filter">
+                <option value="">All Items</option>
+                <option value="in-stock">In Stock</option>
+                <option value="low-stock">Low Stock</option>
+                <option value="out-of-stock">Out of Stock</option>
+              </select>
+            </div>
+
+            <!-- Clear Filters -->
+            <div class="filter-group">
+              <button id="clear-filters" class="btn-outline">Clear All Filters</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Summary -->
+        <div class="results-section">
+          <div class="results-info">
+            <span id="results-count">Showing 0 of 0 products</span>
+            <span id="active-filters"></span>
+          </div>
+        </div>
+
+        <!-- Table Container -->
+        <div class="table-container">
+          <table id="products-table">
+            <thead>
+              <tr>
+                <th data-sort="name" class="sortable">
+                  Product Name
+                  <span class="sort-indicator"></span>
+                </th>
+                <th data-sort="category" class="sortable">
+                  Category
+                  <span class="sort-indicator"></span>
+                </th>
+                <th data-sort="price" class="sortable">
+                  Price
+                  <span class="sort-indicator"></span>
+                </th>
+                <th data-sort="rating" class="sortable">
+                  Rating
+                  <span class="sort-indicator"></span>
+                </th>
+                <th data-sort="stock" class="sortable">
+                  Stock
+                  <span class="sort-indicator"></span>
+                </th>
+                <th data-sort="dateAdded" class="sortable">
+                  Added Date
+                  <span class="sort-indicator"></span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- Dynamic content will be inserted here -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Performance Metrics (Optional) -->
+        <div class="metrics-section">
+          <h4>Performance Metrics</h4>
+          <div class="metrics-grid">
+            <div class="metric">
+              <span class="metric-label">Filter Time:</span>
+              <span id="filter-time">0ms</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Sort Time:</span>
+              <span id="sort-time">0ms</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Render Time:</span>
+              <span id="render-time">0ms</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="filter-sort.js"></script>
+  </body>
+</html>
