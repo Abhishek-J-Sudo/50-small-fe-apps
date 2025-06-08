@@ -73,28 +73,29 @@ Service Worker Demo - Offline capability<br>
 Module Pattern Demo - Code organization
 
 Update : 7/June/2025
+<hr>
 
-High Priority (Industry Essential):
+### High Priority (Industry Essential):
 
-Phase 5: Custom Context Menu, Text Editor
-Phase 6: Accordion, Loading Skeleton
-Phase 7: Infinite Scroll, Intersection Observer
-Phase 8: Local Storage, Undo/Redo
-Phase 9: Carousel, Virtual Scroll, Router
+Phase 5: Custom Context Menu, Text Editor<br>
+Phase 6: Accordion, Loading Skeleton<br>
+Phase 7: Infinite Scroll, Intersection Observer<br>
+Phase 8: Local Storage, Undo/Redo<br>
+Phase 9: Carousel, Virtual Scroll, Router<br>
 Phase 10: WebSocket, Service Worker
 
-Medium Priority (Nice to Have):
+### Medium Priority (Nice to Have):
 
-Phase 5: Touch Gestures
-Phase 6: CSS Animation Controller
-Phase 7: Scroll Spy, Resize Observer
-Phase 8: State History
+Phase 5: Touch Gestures<br>
+Phase 6: CSS Animation Controller<br>
+Phase 7: Scroll Spy, Resize Observer<br>
+Phase 8: State History<br>
 Phase 9: Page Transitions
 
-Low Priority (Skip Unless Interested):
+### Low Priority (Skip Unless Interested):
 
-Phase 5: Keyboard Piano, Event Bubbling Demo
-Phase 6: Text Scrambler, Sprite Sheet
-Phase 7: Parallax
-Phase 8: Template Engine
+Phase 5: Keyboard Piano, Event Bubbling Demo<br>
+Phase 6: Text Scrambler, Sprite Sheet<br>
+Phase 7: Parallax<br>
+Phase 8: Template Engine<br>
 Phase 10: Canvas Drawing, Audio Visualizer 
